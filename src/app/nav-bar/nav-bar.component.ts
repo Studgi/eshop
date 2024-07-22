@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {FilterService} from "../services/filter.service";
 import {RouterLink} from "@angular/router";
 import {CartService} from "../services/cart.service";
@@ -14,6 +14,7 @@ import {CartService} from "../services/cart.service";
 })
 export class NavBarComponent implements OnInit {
 
+  @Input() showSearchBar: boolean = true;
   totalItems : number = 0;
 
   constructor(private filterService: FilterService, private cartService: CartService) {}

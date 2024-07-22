@@ -1,6 +1,6 @@
 <div class="product-list-container">
   @for (product of products; track product.id) {
-    @if ((id !== -1 && id === product.id || id === -1) && (filterId === 0 || product.type === filterId) && (search === "" || product.name.toLowerCase().includes(search))) {
+    @if ((filterId === 0 || product.type === filterId) && (search === "" || product.name.toLowerCase().includes(search))) {
       <app-product
         [product]="product"
       ></app-product>

@@ -24,6 +24,7 @@ export class ProductComponent implements OnInit {
     likes: number;
     originalPrice: number;
     sellPrice: number;
+    description: string;
   } | undefined;
 
   constructor(private cartService: CartService) {

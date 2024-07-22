@@ -1,7 +1,13 @@
 <div class="product-container">
   <div class="product-header">
+    @if (product?.used) {
+      <img src="product/used.png" class="used" alt="used">
+    }
     <img src="{{ product?.image }}" alt="product preview">
-    <h3>{{ product?.name }}</h3>
+    <div class="product-info">
+      <h3>{{ product?.name }}</h3>
+      <h5>{{ product?.description }}</h5>
+    </div>
   </div>
   <div class="product-details">
     <div class="like-container">
