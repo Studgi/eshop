@@ -1,0 +1,31 @@
+<div class="product-container">
+  <div class="product-header">
+    <img src="{{ product?.image }}" alt="product preview">
+    <h3>{{ product?.name }}</h3>
+  </div>
+  <div class="product-details">
+    <div class="like-container">
+      <img src="product/like.png" alt="like">
+      <h5>{{ product?.likes }}</h5>
+    </div>
+    <h5>Shipping to {{ product?.shippingCountry }}</h5>
+    <div class="product-price">
+      <h4><b>{{ convertPrice(product?.sellPrice) }} EGP</b></h4>
+      @if (product?.sellPrice !== product?.originalPrice) {
+        <h5><s>{{ convertPrice(product?.originalPrice) }} EGP</s></h5>
+      }
+      <div class="cart-button">
+        <div><button (click)="copy()">{{ copied ? "Copied!" : "Share" }}</button></div>
+      </div>
+      <div class="cart-button">
+        @if (hideMathCart) {
+          <button (click)="addToCart()">Add to cart</button>
+        } @else {
+          <button (click)="changeItemCount(-1)">-</button>
+          <button [style.background-color]="'#5C677D'">{{ itemCount }}</button>
+          <button (click)="changeItemCount(1)">+</button>
+        }
+      </div>
+    </div>
+  </div>
+</div>

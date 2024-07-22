@@ -1,0 +1,9 @@
+<div class="category-container">
+  @for (category of categories; track category.id) {
+    <button class="category-btn" id="category.id"
+            (click)="setSelectedCategory(category.id)"
+            [class]="{'category-btn-selected': selectedCategoryId === category.id, 'category-btn-selected:hover': selectedCategoryId === category.id}">
+      {{ category.name }}
+    </button>
+  }
+</div>

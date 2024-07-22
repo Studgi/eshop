@@ -1,0 +1,12 @@
+<div class="nav-container" xmlns="http://www.w3.org/1999/html">
+  <div>
+    <a class="nav-button" [routerLink]="['shop']"><img src="nav/shop_button.png" alt="shop button"></a>
+    <a class="nav-cart" [routerLink]="['cart']">
+      <img src="nav/cart_button.png" alt="cart button">
+      <div class="item-count">{{ totalItems }}</div>
+    </a>
+  </div>
+  <div class="nav-search">
+    <input type="search" name="query" placeholder="Search..." (input)="changeSearch($event)">
+  </div>
+</div>

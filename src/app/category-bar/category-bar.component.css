@@ -1,0 +1,39 @@
+.category-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.category-btn {
+  background-color: #002855;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: transform 0.2s, background-color 0.1s ease-in-out;
+}
+
+.category-btn:hover {
+  background-color: #023E7D;
+  transform: scale(1.1);
+  transition: transform 0.2s, background-color 0.1s ease-in-out;
+}
+
+.category-btn-selected {
+  background-color: #0353A4;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.category-btn-selected:hover {
+  background-color: #0353A4;
+  transition: background-color 0.1s ease-in-out;
+}
