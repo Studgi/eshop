@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ProductComponent} from "../product/product.component";
-import {FilterService} from "../services/filter.service";
+import {FilterService} from "../../../core/services/filter.service";
 import {ActivatedRoute} from "@angular/router";
-import {ProductService} from "../services/product.service";
+import {ProductService} from "../../services/product.service";
 
 @Component({
   selector: 'app-products-list',
@@ -26,7 +26,7 @@ export class ProductsListComponent implements OnInit {
     originalPrice: number;
     sellPrice: number;
     description: string;
-  }[] | undefined;
+  }[] | undefined = [];
 
   filterId: number = 0;
   search: string = '';

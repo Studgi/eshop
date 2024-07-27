@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import {NavBarComponent} from "../nav-bar/nav-bar.component";
 import {CategoryBarComponent} from "../category-bar/category-bar.component";
-import {ProductsListComponent} from "../products-list/products-list.component";
-import {ShopComponent} from "../shop/shop.component";
+import {ProductsListComponent} from "../../../features/components/products-list/products-list.component";
 
 @Component({
   selector: 'app-container',
@@ -11,7 +10,6 @@ import {ShopComponent} from "../shop/shop.component";
     NavBarComponent,
     CategoryBarComponent,
     ProductsListComponent,
-    ShopComponent
   ],
   templateUrl: './container.component.html',
   styleUrl: './container.component.css'

@@ -1,0 +1,26 @@
+<div class="nav-container" xmlns="http://www.w3.org/1999/html">
+  <div>
+    <a class="nav-button" [routerLink]="['shop']"><img src="nav/shop_button.png" alt="shop button"></a>
+    <a class="nav-cart" [routerLink]="['cart']">
+      <img src="nav/cart_button.png" alt="cart button">
+      <div class="item-count">{{ totalItems }}</div>
+    </a>
+  </div>
+  @if (showSearchBar) {
+    <div class="nav-search">
+      <p-autoComplete
+        placeholder="Search"
+        size="50"
+        [(ngModel)]="selectedProduct"
+        [suggestions]="productSuggestions"
+        (input)="changeSearch($event)"
+        (completeMethod)="searchAutoComplete($event)"
+        optionLabel="name">
+        <ng-template let-product pTemplate="item">
+          <img [src]="product.image" style="width: 18px; height: 18px" />
+          {{ product.name }}
+        </ng-template>
+      </p-autoComplete>
+    </div>
+  }
+</div>

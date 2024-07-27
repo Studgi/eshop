@@ -12,21 +12,21 @@
   justify-content: center;
 }
 
-.nav-search input {
-  width: 100%;
-  padding: 10px 20px;
-  border: 2px solid #1e90ff;
-  border-radius: 25px;
-  outline: none;
-  font-size: 16px;
-  transition: all 0.3s ease;
-  justify-content: center;
-}
+/*.nav-autocomplete {*/
+/*  width: 100%;*/
+/*  padding: 10px 20px;*/
+/*  border: 2px solid #1e90ff;*/
+/*  border-radius: 25px;*/
+/*  outline: none;*/
+/*  font-size: 16px;*/
+/*  transition: all 0.3s ease;*/
+/*  justify-content: center;*/
+/*}*/
 
-.nav-search input:focus {
-  border-color: #104e8b;
-  box-shadow: 0 0 10px rgba(30, 144, 255, 0.5);
-}
+/*.nav-autocomplete:focus {*/
+/*  border-color: #104e8b;*/
+/*  box-shadow: 0 0 10px rgba(30, 144, 255, 0.5);*/
+/*}*/
 
 .nav-button {
   background-color: transparent;
